@@ -1,8 +1,6 @@
 package com.sumutella.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * @author sumutella
@@ -12,12 +10,22 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Students")
 public class Student {
+
+
+    @Id
+    @SequenceGenerator(name = "seqStudent", sequenceName = "STUDENTS_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seqStudent")
     private Integer id;
     @Column(name = "full_name")
     private String fullName;
     private String email;
 
     public Student() {
+    }
+
+    public Student(String fullName, String email) {
+        this.fullName = fullName;
+        this.email = email;
     }
 
     public Integer getId() {
@@ -42,5 +50,14 @@ public class Student {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
