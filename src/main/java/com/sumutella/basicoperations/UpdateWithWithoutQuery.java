@@ -1,4 +1,4 @@
-package com.sumutella.app;
+package com.sumutella.basicoperations;
 
 import com.sumutella.entity.Student;
 import org.hibernate.Session;

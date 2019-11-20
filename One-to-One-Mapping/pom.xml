@@ -5,14 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.sumutella</groupId>
-  <artifactId>spring-hibernate-study</artifactId>
-  <packaging>pom</packaging>
+  <artifactId>one-to-one-mapping</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>One-to-One-Mapping</module>
-  </modules>
 
-  <name>spring-hibernate-study</name>
+  <name>one-to-one-mapping</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -36,24 +32,24 @@
 
 
     <!--  spring-orm  spring-context spring-core -->
-      <dependency>
-          <groupId>org.springframework</groupId>
-          <artifactId>spring-orm</artifactId>
-          <version>5.2.0.RELEASE</version>
-      </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>5.2.0.RELEASE</version>
+    </dependency>
 
 
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-context</artifactId>
-        <version>5.2.0.RELEASE</version>
-      </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.2.0.RELEASE</version>
+    </dependency>
 
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-core</artifactId>
-        <version>5.2.0.RELEASE</version>
-      </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>5.2.0.RELEASE</version>
+    </dependency>
     <!--  spring-orm  spring-context spring-core -->
 
     <!-- tomcat-dbcp -->
@@ -103,11 +99,6 @@
     </dependency>
 
     <!-- for support java 9 and higher-->
-
-
-
-
-
 
     <dependency>
       <groupId>junit</groupId>

@@ -1,4 +1,4 @@
-package com.sumutella.app;
+package com.sumutella.basicoperations;
 
 import com.sumutella.entity.Student;
 import org.hibernate.Session;
@@ -6,31 +6,38 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 /**
- * @author sumutella
- * @time 9:48 PM
- * @since 11/19/2019, Tue
+ * Hello world!
+ *
  */
-public class QueryApp {
-    public static void main(String[] args) {
+public class SaveRetrieve
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+
         SessionFactory sessionFactory= new Configuration().configure("hibernate.cfg.xml").
                 addAnnotatedClass(Student.class).buildSessionFactory();
 
         Session session = sessionFactory.getCurrentSession();
 
-        String hql ="from Student s where s.fullName like '%s%' or s.email like'%metu%' and s.id = 1";
 
-
-        try {
-
+        try{
+            //Student student = new Student("Semir Kurt", "e186906@metu.edu.tr");
             session.beginTransaction();
-            Student student = session.createQuery(hql, Student.class).getSingleResult();
 
+            //session.save(student);
+
+            Student student = session.get(Student.class, 1);
             System.out.println(student);
 
             session.getTransaction().commit();
+
+
+
         } finally {
             sessionFactory.close();
         }
+
 
 
     }
