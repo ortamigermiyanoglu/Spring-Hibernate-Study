@@ -10,6 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>One-to-One-Mapping</module>
+      <module>One-to-One-Bidirectional-Mapping</module>
   </modules>
 
   <name>spring-hibernate-study</name>
@@ -103,11 +104,6 @@
     </dependency>
 
     <!-- for support java 9 and higher-->
-
-
-
-
-
 
     <dependency>
       <groupId>junit</groupId>
