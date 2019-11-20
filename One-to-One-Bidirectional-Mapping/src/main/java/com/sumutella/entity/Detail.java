@@ -71,7 +71,6 @@ public class Detail {
                 "id=" + id +
                 ", fbPage='" + fbPage + '\'' +
                 ", hobby='" + hobby + '\'' +
-                ", instructor=" + instructor +
                 '}';
     }
 }
