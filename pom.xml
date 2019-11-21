@@ -12,6 +12,7 @@
     <module>One-to-One-Mapping</module>
       <module>One-to-One-Bidirectional-Mapping</module>
       <module>One-to-Many-Mapping</module>
+      <module>Eager-Lazy-Loading</module>
   </modules>
 
   <name>spring-hibernate-study</name>
