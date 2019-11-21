@@ -43,7 +43,6 @@ public class App {
         }
 
         finally {
-            session.close();
             sessionFactory.close();
 
         }

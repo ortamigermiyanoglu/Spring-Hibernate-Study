@@ -29,10 +29,12 @@ public class App
             session.beginTransaction();
 
             Instructor instructor = session.get(Instructor.class, 7);
-            Course course1 = new Course("Networking" ,instructor);
-            Course course2 = new Course("3D Animation", instructor);
-            session.save(course1);
-            session.save(course2);
+//            Course course1 = new Course("Networking" ,instructor);
+//            Course course2 = new Course("3D Animation", instructor);
+//            session.save(course1);
+//            session.save(course2);
+
+            System.out.println(instructor.getCourses());
 
             session.getTransaction().commit();
         } catch (Exception exception){
